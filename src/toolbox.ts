@@ -956,6 +956,9 @@ export const toolbox = {
                   inputs: {}
                 },
                 {
+                  kind: "sep"
+                },
+                {
                   kind: "block",
                   type: "Player_isOP",
                   inputs: {}

@@ -10,7 +10,7 @@ import { javascriptGenerator } from 'blockly/javascript';
 import { save, load } from './serialization';
 import { toolbox } from './toolbox';
 import * as zh from "blockly/msg/zh-hans";
-import './index.css';
+import './assets/index.css';
 
 
 export default {
@@ -31,7 +31,15 @@ export default {
             throw new Error(`div with id 'blockly-div' not found`);
         }
 
-        const ws = Blockly.inject(blocklyDiv, { toolbox });
+        const ws = Blockly.inject(blocklyDiv, {
+            toolbox, media: "./src/assets/media", grid: {
+                spacing: 20, length: 5,
+                colour: '#000',
+                snap: true
+            },
+            trashcan: true
+        });
+
 
         const runCode = () => {
             const code = javascriptGenerator.workspaceToCode(ws as Blockly.Workspace);

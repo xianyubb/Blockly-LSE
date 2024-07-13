@@ -365,6 +365,6 @@ forBlock["Player_IP"] = function () {
 };
 
 forBlock["Player_isOP"] = function () {
-  const code = `player.isOp()`;
+  const code = `player.isOP()`;
   return [code, Order.NONE];
 };

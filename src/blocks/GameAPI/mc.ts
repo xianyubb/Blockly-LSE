@@ -4,7 +4,7 @@ const mc_getTime = {
     "type": "mc_getTime",
     "tooltip": "",
     "helpUrl": "",
-    "message0": "mc::getTime %1",
+    "message0": "getTime %1",
     "args0": [
         {
             "type": "input_value",
@@ -21,7 +21,7 @@ const mc_setTime = {
     "type": "mc_setTime",
     "tooltip": "",
     "helpUrl": "",
-    "message0": "mc::setTime %1",
+    "message0": "setTime %1",
     "args0": [
         {
             "type": "input_value",
@@ -38,7 +38,7 @@ const mc_getWeather = {
     "type": "mc_getWeather",
     "tooltip": "",
     "helpUrl": "",
-    "message0": "mc::getWeather",
+    "message0": "getWeather",
     "args0": [],
     "colour": 120,
     "output": null
@@ -48,7 +48,7 @@ const mc_setWeather = {
     "type": "mc_setWeather",
     "tooltip": "",
     "helpUrl": "",
-    "message0": "mc::setWeather %1",
+    "message0": "setWeather %1",
     "args0": [
         {
             "type": "input_value",
