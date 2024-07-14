@@ -10,7 +10,7 @@ const Event = {
             "check": "String"
         },
         {
-            "type": "input_value",
+            "type": "input_statement",
             "name": "callback",
             "check": "any" || "Boolean"
         }

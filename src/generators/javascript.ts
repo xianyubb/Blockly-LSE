@@ -12,26 +12,6 @@ import * as Blockly from 'blockly/core';
 // This file has no side effects!
 export const forBlock = Object.create(null);
 
-forBlock['add_text'] = function (
-  block: Blockly.Block,
-  generator: Blockly.CodeGenerator,
-) {
-  const text = generator.valueToCode(block, 'TEXT', Order.NONE) || "''";
-  const addText = generator.provideFunction_(
-    'addText',
-    `function ${generator.FUNCTION_NAME_PLACEHOLDER_}(text) {
-
-  // Add text to the output area.
-  const outputDiv = document.getElementById('output');
-  const textEl = document.createElement('p');
-  textEl.innerText = text;
-  outputDiv.appendChild(textEl);
-}`,
-  );
-  // Generate the function call for this block.
-  const code = `${addText}(${text});\n`;
-  return code;
-};
 
 forBlock['mc_getTime'] = function (block: Blockly.Block,
   generator: Blockly.CodeGenerator) {
@@ -360,11 +340,22 @@ forBlock["Player_IsMoving"] = function () {
 };
 
 forBlock["Player_IP"] = function () {
-  const code = `player.ip`; // Assuming 'ip' is the correct property name and it's not deprecated in this context
+  const code = `player.ip\n`; // Assuming 'ip' is the correct property name and it's not deprecated in this context
   return [code, Order.NONE];
 };
 
-forBlock["Player_isOP"] = function () {
-  const code = `player.isOP()`;
-  return [code, Order.NONE];
+forBlock["Player_isOP"] = function (block: any,
+) {
+  const code = "player.isOP() \n";
+  // if (block.dragStrategy.block.parentBlock_.type != null) console.log(block.dragStrategy.block.parentBlock_.type);
+
+  if (block.dragStrategy.block.parentBlock_ == null) return "player.isOP()";
+  // if (block.dragStrategy.block.parentBlock_.type === "procedures_defnoreturn") return code;
+  // else
+  if (block.dragStrategy.block.parentBlock_.type === "variables_set") return ["player.isOP()", Order.NONE];
+  else return code;
+
+
 };
+
+

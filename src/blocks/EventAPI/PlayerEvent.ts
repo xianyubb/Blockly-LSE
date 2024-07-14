@@ -14,10 +14,12 @@ const onPreJoin = {
     "colour": 230,
     "tooltip": "",
     "helpUrl": "",
-    "output": null
+    "output": null,
+    "previousStatement": null
 };
 
 
 export const PlayerEvent_blocks = Blockly.common.createBlockDefinitionsFromJsonArray([
     onPreJoin
 ]);
+

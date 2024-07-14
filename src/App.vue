@@ -1,10 +1,10 @@
 <script lang="ts">
 import * as Blockly from 'blockly';
-import { blocks } from './blocks/text';
 import { mc_blocks } from './blocks/GameAPI/mc';
 import { Event_blocks } from './blocks/EventAPI/Event';
 import { PlayerEvent_blocks } from './blocks/EventAPI/PlayerEvent';
 import { PlayerAPI_blocks } from './blocks/GameAPI/player';
+
 import { forBlock } from './generators/javascript';
 import { javascriptGenerator } from 'blockly/javascript';
 import { save, load } from './serialization';
@@ -16,7 +16,6 @@ import './assets/index.css';
 export default {
     mounted() {
         Blockly.setLocale(zh);
-        Blockly.common.defineBlocks(blocks);
         Blockly.common.defineBlocks(mc_blocks);
         Blockly.common.defineBlocks(Event_blocks);
         Blockly.common.defineBlocks(PlayerEvent_blocks);
@@ -42,7 +41,10 @@ export default {
 
 
         const runCode = () => {
-            const code = javascriptGenerator.workspaceToCode(ws as Blockly.Workspace);
+
+            const code = javascriptGenerator.workspaceToCode(ws);
+
+            
             if (codeDiv) codeDiv.textContent = code;
 
             if (outputDiv) outputDiv.innerHTML = '';
@@ -79,7 +81,6 @@ export default {
             });
         }
     },
-    code: "hjj"
 }
 
 </script>

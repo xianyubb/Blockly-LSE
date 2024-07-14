@@ -34,8 +34,8 @@ code {
 #outputPane {
   display: flex;
   flex-direction: column;
-  width: 400px;
-  flex: 0 0 400px;
+  width: 500px;
+  flex: 0 0 500px;
   overflow: auto;
   margin: 1rem;
 }

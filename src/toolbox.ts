@@ -491,20 +491,6 @@ export const toolbox = {
             },
           },
         },
-        {
-          kind: 'block',
-          type: 'add_text',
-          inputs: {
-            TEXT: {
-              shadow: {
-                type: 'text',
-                fields: {
-                  TEXT: 'abc',
-                },
-              },
-            },
-          },
-        },
       ],
     },
     {
@@ -962,7 +948,7 @@ export const toolbox = {
                   kind: "block",
                   type: "Player_isOP",
                   inputs: {}
-                }
+                },
               ]
             }
           ]
@@ -992,7 +978,8 @@ export const toolbox = {
                   inputs: {
                     player: {}
                   }
-                }],
+                },
+              ],
             }
           ]
         },
