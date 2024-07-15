@@ -4,55 +4,68 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import { Order } from 'blockly/javascript';
-import * as Blockly from 'blockly/core';
+import { Order } from "blockly/javascript";
+import * as Blockly from "blockly/core";
 
 // Export all the code generators for our custom blocks,
 // but don't register them with Blockly yet.
 // This file has no side effects!
 export const forBlock = Object.create(null);
 
-
-forBlock['mc_getTime'] = function (block: Blockly.Block,
-  generator: Blockly.CodeGenerator) {
-  const text = generator.valueToCode(block, 'TimeID', Order.NONE) || 0;
+forBlock["mc_getTime"] = function (
+  block: Blockly.Block,
+  generator: Blockly.CodeGenerator
+) {
+  const text = generator.valueToCode(block, "TimeID", Order.NONE) || 0;
   // Generate the function call for this block.
   const code = `mc.getTime(${text})`;
   return [code, Order.NONE];
 };
 
-forBlock['mc_setTime'] = function (block: Blockly.Block, generator: Blockly.CodeGenerator) {
-  const text = generator.valueToCode(block, 'tick', Order.NONE) || 114514;
+forBlock["mc_setTime"] = function (
+  block: Blockly.Block,
+  generator: Blockly.CodeGenerator
+) {
+  const text = generator.valueToCode(block, "tick", Order.NONE) || 114514;
   // Generate the function call for this block.
   const code = `mc.setTime(${text})`;
   return [code, Order.NONE];
 };
 
-forBlock['mc_getWeather'] = function () {
+forBlock["mc_getWeather"] = function () {
   // Generate the function call for this block.
   const code = `mc.getWeather()`;
   return [code, Order.NONE];
 };
 
-
-forBlock['mc_setWeather'] = function (block: Blockly.Block, generator: Blockly.CodeGenerator) {
-  const text = generator.valueToCode(block, 'WeatherID', Order.NONE) || 0;
+forBlock["mc_setWeather"] = function (
+  block: Blockly.Block,
+  generator: Blockly.CodeGenerator
+) {
+  const text = generator.valueToCode(block, "WeatherID", Order.NONE) || 0;
   // Generate the function call for this block.
   const code = `mc.setWeather(${text})`;
   return [code, Order.NONE];
 };
 
 // Event
-forBlock["Event"] = function (block: Blockly.Block, generator: Blockly.CodeGenerator) {
-  const text = generator.valueToCode(block, 'event', Order.NONE) || "onJoin";
-  const callback = generator.valueToCode(block, 'callback', Order.NONE) || function () { };
+forBlock["Event"] = function (
+  block: Blockly.Block,
+  generator: Blockly.CodeGenerator
+) {
+  const text = generator.valueToCode(block, "event", Order.NONE) || "onJoin";
+  const callback =
+    generator.valueToCode(block, "callback", Order.NONE) || function () {};
   const code = `mc.listen(${text}, ${callback})`;
   return [code, Order.NONE];
 };
 
 // PlayerEvent
-forBlock["onPreJoin"] = function (block: Blockly.Block, generator: Blockly.CodeGenerator) {
-  const text = generator.statementToCode(block, 'player');
+forBlock["onPreJoin"] = function (
+  block: Blockly.Block,
+  generator: Blockly.CodeGenerator
+) {
+  const text = generator.statementToCode(block, "player");
   const callback = `function (player) {
   ${text} }`;
   const code = `${callback}`;
@@ -110,8 +123,6 @@ forBlock["Player_GameMode"] = function () {
   return [code, Order.NONE];
 };
 
-
-
 forBlock["Player_MaxHealth"] = function () {
   const code = `player.maxHealth`;
   return [code, Order.NONE];
@@ -127,7 +138,6 @@ forBlock["Player_Speed"] = function () {
   const code = `player.speed`;
   return [code, Order.NONE];
 };
-
 
 forBlock["Player_Sneaking"] = function () {
   const code = `player.sneaking`; // @deprecated
@@ -344,18 +354,19 @@ forBlock["Player_IP"] = function () {
   return [code, Order.NONE];
 };
 
-forBlock["Player_isOP"] = function (block: any,
+forBlock["Player_isOP"] = function (
+  block: any,
+  CodeGenerator: Blockly.CodeGenerator
 ) {
-  const code = "player.isOP() \n";
+  const vars = CodeGenerator.valueToCode(block, "var", Order.NONE) || "player";
+  const code1 = `${vars}.isOP() \n`.replace("'", "").replace("'", "");
+  const code2 = `${vars}.isOP()`.replace("'", "").replace("'", "");
   // if (block.dragStrategy.block.parentBlock_.type != null) console.log(block.dragStrategy.block.parentBlock_.type);
 
-  if (block.dragStrategy.block.parentBlock_ == null) return "player.isOP()";
+  if (block.dragStrategy.block.parentBlock_ == null) return code2;
   // if (block.dragStrategy.block.parentBlock_.type === "procedures_defnoreturn") return code;
   // else
-  if (block.dragStrategy.block.parentBlock_.type === "variables_set") return ["player.isOP()", Order.NONE];
-  else return code;
-
-
+  if (block.dragStrategy.block.parentBlock_.type === "variables_set")
+    return [code2, Order.NONE];
+  else return code1;
 };
-
-
