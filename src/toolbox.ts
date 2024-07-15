@@ -13,55 +13,55 @@ listed here.
 */
 
 export const toolbox = {
-  kind: 'categoryToolbox',
+  kind: "categoryToolbox",
   contents: [
     {
-      kind: 'category',
-      name: 'Logic',
-      categorystyle: 'logic_category',
+      kind: "category",
+      name: "Logic",
+      categorystyle: "logic_category",
       contents: [
         {
-          kind: 'block',
-          type: 'controls_if',
+          kind: "block",
+          type: "controls_if",
         },
         {
-          kind: 'block',
-          type: 'logic_compare',
+          kind: "block",
+          type: "logic_compare",
         },
         {
-          kind: 'block',
-          type: 'logic_operation',
+          kind: "block",
+          type: "logic_operation",
         },
         {
-          kind: 'block',
-          type: 'logic_negate',
+          kind: "block",
+          type: "logic_negate",
         },
         {
-          kind: 'block',
-          type: 'logic_boolean',
+          kind: "block",
+          type: "logic_boolean",
         },
         {
-          kind: 'block',
-          type: 'logic_null',
+          kind: "block",
+          type: "logic_null",
         },
         {
-          kind: 'block',
-          type: 'logic_ternary',
+          kind: "block",
+          type: "logic_ternary",
         },
       ],
     },
     {
-      kind: 'category',
-      name: 'Loops',
-      categorystyle: 'loop_category',
+      kind: "category",
+      name: "Loops",
+      categorystyle: "loop_category",
       contents: [
         {
-          kind: 'block',
-          type: 'controls_repeat_ext',
+          kind: "block",
+          type: "controls_repeat_ext",
           inputs: {
             TIMES: {
               shadow: {
-                type: 'math_number',
+                type: "math_number",
                 fields: {
                   NUM: 10,
                 },
@@ -70,16 +70,16 @@ export const toolbox = {
           },
         },
         {
-          kind: 'block',
-          type: 'controls_whileUntil',
+          kind: "block",
+          type: "controls_whileUntil",
         },
         {
-          kind: 'block',
-          type: 'controls_for',
+          kind: "block",
+          type: "controls_for",
           inputs: {
             FROM: {
               shadow: {
-                type: 'math_number',
+                type: "math_number",
                 fields: {
                   NUM: 1,
                 },
@@ -87,7 +87,7 @@ export const toolbox = {
             },
             TO: {
               shadow: {
-                type: 'math_number',
+                type: "math_number",
                 fields: {
                   NUM: 10,
                 },
@@ -95,7 +95,7 @@ export const toolbox = {
             },
             BY: {
               shadow: {
-                type: 'math_number',
+                type: "math_number",
                 fields: {
                   NUM: 1,
                 },
@@ -104,34 +104,34 @@ export const toolbox = {
           },
         },
         {
-          kind: 'block',
-          type: 'controls_forEach',
+          kind: "block",
+          type: "controls_forEach",
         },
         {
-          kind: 'block',
-          type: 'controls_flow_statements',
+          kind: "block",
+          type: "controls_flow_statements",
         },
       ],
     },
     {
-      kind: 'category',
-      name: 'Math',
-      categorystyle: 'math_category',
+      kind: "category",
+      name: "Math",
+      categorystyle: "math_category",
       contents: [
         {
-          kind: 'block',
-          type: 'math_number',
+          kind: "block",
+          type: "math_number",
           fields: {
             NUM: 123,
           },
         },
         {
-          kind: 'block',
-          type: 'math_arithmetic',
+          kind: "block",
+          type: "math_arithmetic",
           inputs: {
             A: {
               shadow: {
-                type: 'math_number',
+                type: "math_number",
                 fields: {
                   NUM: 1,
                 },
@@ -139,7 +139,7 @@ export const toolbox = {
             },
             B: {
               shadow: {
-                type: 'math_number',
+                type: "math_number",
                 fields: {
                   NUM: 1,
                 },
@@ -148,12 +148,12 @@ export const toolbox = {
           },
         },
         {
-          kind: 'block',
-          type: 'math_single',
+          kind: "block",
+          type: "math_single",
           inputs: {
             NUM: {
               shadow: {
-                type: 'math_number',
+                type: "math_number",
                 fields: {
                   NUM: 9,
                 },
@@ -162,12 +162,12 @@ export const toolbox = {
           },
         },
         {
-          kind: 'block',
-          type: 'math_trig',
+          kind: "block",
+          type: "math_trig",
           inputs: {
             NUM: {
               shadow: {
-                type: 'math_number',
+                type: "math_number",
                 fields: {
                   NUM: 45,
                 },
@@ -176,16 +176,16 @@ export const toolbox = {
           },
         },
         {
-          kind: 'block',
-          type: 'math_constant',
+          kind: "block",
+          type: "math_constant",
         },
         {
-          kind: 'block',
-          type: 'math_number_property',
+          kind: "block",
+          type: "math_number_property",
           inputs: {
             NUMBER_TO_CHECK: {
               shadow: {
-                type: 'math_number',
+                type: "math_number",
                 fields: {
                   NUM: 0,
                 },
@@ -194,15 +194,15 @@ export const toolbox = {
           },
         },
         {
-          kind: 'block',
-          type: 'math_round',
+          kind: "block",
+          type: "math_round",
           fields: {
-            OP: 'ROUND',
+            OP: "ROUND",
           },
           inputs: {
             NUM: {
               shadow: {
-                type: 'math_number',
+                type: "math_number",
                 fields: {
                   NUM: 3.1,
                 },
@@ -211,19 +211,19 @@ export const toolbox = {
           },
         },
         {
-          kind: 'block',
-          type: 'math_on_list',
+          kind: "block",
+          type: "math_on_list",
           fields: {
-            OP: 'SUM',
+            OP: "SUM",
           },
         },
         {
-          kind: 'block',
-          type: 'math_modulo',
+          kind: "block",
+          type: "math_modulo",
           inputs: {
             DIVIDEND: {
               shadow: {
-                type: 'math_number',
+                type: "math_number",
                 fields: {
                   NUM: 64,
                 },
@@ -231,7 +231,7 @@ export const toolbox = {
             },
             DIVISOR: {
               shadow: {
-                type: 'math_number',
+                type: "math_number",
                 fields: {
                   NUM: 10,
                 },
@@ -240,12 +240,12 @@ export const toolbox = {
           },
         },
         {
-          kind: 'block',
-          type: 'math_constrain',
+          kind: "block",
+          type: "math_constrain",
           inputs: {
             VALUE: {
               shadow: {
-                type: 'math_number',
+                type: "math_number",
                 fields: {
                   NUM: 50,
                 },
@@ -253,7 +253,7 @@ export const toolbox = {
             },
             LOW: {
               shadow: {
-                type: 'math_number',
+                type: "math_number",
                 fields: {
                   NUM: 1,
                 },
@@ -261,7 +261,7 @@ export const toolbox = {
             },
             HIGH: {
               shadow: {
-                type: 'math_number',
+                type: "math_number",
                 fields: {
                   NUM: 100,
                 },
@@ -270,12 +270,12 @@ export const toolbox = {
           },
         },
         {
-          kind: 'block',
-          type: 'math_random_int',
+          kind: "block",
+          type: "math_random_int",
           inputs: {
             FROM: {
               shadow: {
-                type: 'math_number',
+                type: "math_number",
                 fields: {
                   NUM: 1,
                 },
@@ -283,7 +283,7 @@ export const toolbox = {
             },
             TO: {
               shadow: {
-                type: 'math_number',
+                type: "math_number",
                 fields: {
                   NUM: 100,
                 },
@@ -292,16 +292,16 @@ export const toolbox = {
           },
         },
         {
-          kind: 'block',
-          type: 'math_random_float',
+          kind: "block",
+          type: "math_random_float",
         },
         {
-          kind: 'block',
-          type: 'math_atan2',
+          kind: "block",
+          type: "math_atan2",
           inputs: {
             X: {
               shadow: {
-                type: 'math_number',
+                type: "math_number",
                 fields: {
                   NUM: 1,
                 },
@@ -309,7 +309,7 @@ export const toolbox = {
             },
             Y: {
               shadow: {
-                type: 'math_number',
+                type: "math_number",
                 fields: {
                   NUM: 1,
                 },
@@ -320,173 +320,173 @@ export const toolbox = {
       ],
     },
     {
-      kind: 'category',
-      name: 'Text',
-      categorystyle: 'text_category',
+      kind: "category",
+      name: "Text",
+      categorystyle: "text_category",
       contents: [
         {
-          kind: 'block',
-          type: 'text',
+          kind: "block",
+          type: "text",
         },
         {
-          kind: 'block',
-          type: 'text_join',
+          kind: "block",
+          type: "text_join",
         },
         {
-          kind: 'block',
-          type: 'text_append',
+          kind: "block",
+          type: "text_append",
           inputs: {
             TEXT: {
               shadow: {
-                type: 'text',
+                type: "text",
                 fields: {
-                  TEXT: '',
+                  TEXT: "",
                 },
               },
             },
           },
         },
         {
-          kind: 'block',
-          type: 'text_length',
+          kind: "block",
+          type: "text_length",
           inputs: {
             VALUE: {
               shadow: {
-                type: 'text',
+                type: "text",
                 fields: {
-                  TEXT: 'abc',
+                  TEXT: "abc",
                 },
               },
             },
           },
         },
         {
-          kind: 'block',
-          type: 'text_isEmpty',
+          kind: "block",
+          type: "text_isEmpty",
           inputs: {
             VALUE: {
               shadow: {
-                type: 'text',
+                type: "text",
                 fields: {
-                  TEXT: '',
+                  TEXT: "",
                 },
               },
             },
           },
         },
         {
-          kind: 'block',
-          type: 'text_indexOf',
+          kind: "block",
+          type: "text_indexOf",
           inputs: {
             VALUE: {
               block: {
-                type: 'variables_get',
+                type: "variables_get",
               },
             },
             FIND: {
               shadow: {
-                type: 'text',
+                type: "text",
                 fields: {
-                  TEXT: 'abc',
+                  TEXT: "abc",
                 },
               },
             },
           },
         },
         {
-          kind: 'block',
-          type: 'text_charAt',
+          kind: "block",
+          type: "text_charAt",
           inputs: {
             VALUE: {
               block: {
-                type: 'variables_get',
+                type: "variables_get",
               },
             },
           },
         },
         {
-          kind: 'block',
-          type: 'text_getSubstring',
+          kind: "block",
+          type: "text_getSubstring",
           inputs: {
             STRING: {
               block: {
-                type: 'variables_get',
+                type: "variables_get",
               },
             },
           },
         },
         {
-          kind: 'block',
-          type: 'text_changeCase',
+          kind: "block",
+          type: "text_changeCase",
           inputs: {
             TEXT: {
               shadow: {
-                type: 'text',
+                type: "text",
                 fields: {
-                  TEXT: 'abc',
+                  TEXT: "abc",
                 },
               },
             },
           },
         },
         {
-          kind: 'block',
-          type: 'text_trim',
+          kind: "block",
+          type: "text_trim",
           inputs: {
             TEXT: {
               shadow: {
-                type: 'text',
+                type: "text",
                 fields: {
-                  TEXT: 'abc',
+                  TEXT: "abc",
                 },
               },
             },
           },
         },
         {
-          kind: 'block',
-          type: 'text_count',
+          kind: "block",
+          type: "text_count",
           inputs: {
             SUB: {
               shadow: {
-                type: 'text',
+                type: "text",
               },
             },
             TEXT: {
               shadow: {
-                type: 'text',
+                type: "text",
               },
             },
           },
         },
         {
-          kind: 'block',
-          type: 'text_replace',
+          kind: "block",
+          type: "text_replace",
           inputs: {
             FROM: {
               shadow: {
-                type: 'text',
+                type: "text",
               },
             },
             TO: {
               shadow: {
-                type: 'text',
+                type: "text",
               },
             },
             TEXT: {
               shadow: {
-                type: 'text',
+                type: "text",
               },
             },
           },
         },
         {
-          kind: 'block',
-          type: 'text_reverse',
+          kind: "block",
+          type: "text_reverse",
           inputs: {
             TEXT: {
               shadow: {
-                type: 'text',
+                type: "text",
               },
             },
           },
@@ -494,25 +494,25 @@ export const toolbox = {
       ],
     },
     {
-      kind: 'category',
-      name: 'Lists',
-      categorystyle: 'list_category',
+      kind: "category",
+      name: "Lists",
+      categorystyle: "list_category",
       contents: [
         {
-          kind: 'block',
-          type: 'lists_create_with',
+          kind: "block",
+          type: "lists_create_with",
         },
         {
-          kind: 'block',
-          type: 'lists_create_with',
+          kind: "block",
+          type: "lists_create_with",
         },
         {
-          kind: 'block',
-          type: 'lists_repeat',
+          kind: "block",
+          type: "lists_repeat",
           inputs: {
             NUM: {
               shadow: {
-                type: 'math_number',
+                type: "math_number",
                 fields: {
                   NUM: 5,
                 },
@@ -521,106 +521,106 @@ export const toolbox = {
           },
         },
         {
-          kind: 'block',
-          type: 'lists_length',
+          kind: "block",
+          type: "lists_length",
         },
         {
-          kind: 'block',
-          type: 'lists_isEmpty',
+          kind: "block",
+          type: "lists_isEmpty",
         },
         {
-          kind: 'block',
-          type: 'lists_indexOf',
+          kind: "block",
+          type: "lists_indexOf",
           inputs: {
             VALUE: {
               block: {
-                type: 'variables_get',
+                type: "variables_get",
               },
             },
           },
         },
         {
-          kind: 'block',
-          type: 'lists_getIndex',
+          kind: "block",
+          type: "lists_getIndex",
           inputs: {
             VALUE: {
               block: {
-                type: 'variables_get',
+                type: "variables_get",
               },
             },
           },
         },
         {
-          kind: 'block',
-          type: 'lists_setIndex',
+          kind: "block",
+          type: "lists_setIndex",
           inputs: {
             LIST: {
               block: {
-                type: 'variables_get',
+                type: "variables_get",
               },
             },
           },
         },
         {
-          kind: 'block',
-          type: 'lists_getSublist',
+          kind: "block",
+          type: "lists_getSublist",
           inputs: {
             LIST: {
               block: {
-                type: 'variables_get',
+                type: "variables_get",
               },
             },
           },
         },
         {
-          kind: 'block',
-          type: 'lists_split',
+          kind: "block",
+          type: "lists_split",
           inputs: {
             DELIM: {
               shadow: {
-                type: 'text',
+                type: "text",
                 fields: {
-                  TEXT: ',',
+                  TEXT: ",",
                 },
               },
             },
           },
         },
         {
-          kind: 'block',
-          type: 'lists_sort',
+          kind: "block",
+          type: "lists_sort",
         },
         {
-          kind: 'block',
-          type: 'lists_reverse',
+          kind: "block",
+          type: "lists_reverse",
         },
       ],
     },
     {
-      kind: 'sep',
+      kind: "sep",
     },
     {
-      kind: 'category',
-      name: 'Variables',
-      categorystyle: 'variable_category',
-      custom: 'VARIABLE',
+      kind: "category",
+      name: "Variables",
+      categorystyle: "variable_category",
+      custom: "VARIABLE",
     },
     {
-      kind: 'category',
-      name: 'Functions',
-      categorystyle: 'procedure_category',
-      custom: 'PROCEDURE',
+      kind: "category",
+      name: "Functions",
+      categorystyle: "procedure_category",
+      custom: "PROCEDURE",
     },
     {
-      kind: 'sep'
+      kind: "sep",
     },
     {
-      kind: 'category',
-      name: 'LSE',
+      kind: "category",
+      name: "LSE",
       categorystyle: "list_category",
       contents: [
         {
-          kind: 'category',
+          kind: "category",
           name: "GameAPI",
           categorystyle: "list_category",
           contents: [
@@ -633,15 +633,15 @@ export const toolbox = {
                   kind: "block",
                   type: "mc_getTime",
                   inputs: {
-                    TimeID: {}
-                  }
+                    TimeID: {},
+                  },
                 },
                 {
                   kind: "block",
                   type: "mc_setTime",
                   inputs: {
-                    tick: {}
-                  }
+                    tick: {},
+                  },
                 },
                 {
                   kind: "block",
@@ -651,10 +651,10 @@ export const toolbox = {
                   kind: "block",
                   type: "mc_setWeather",
                   inputs: {
-                    WeatherID: {}
-                  }
-                }
-              ]
+                    WeatherID: {},
+                  },
+                },
+              ],
             },
             {
               kind: "category",
@@ -664,294 +664,294 @@ export const toolbox = {
                 {
                   kind: "block",
                   type: "Player_Name",
-                  inputs: {}
+                  inputs: {},
                 },
                 {
                   kind: "block",
                   type: "Player_Pos",
-                  inputs: {}
+                  inputs: {},
                 },
                 {
                   kind: "block",
                   type: "Player_BlockPos",
-                  inputs: {}
+                  inputs: {},
                 },
                 {
                   kind: "block",
                   type: "Player_FeetPos",
-                  inputs: {}
+                  inputs: {},
                 },
                 {
                   kind: "block",
                   type: "Player_LastDeathPos",
-                  inputs: {}
+                  inputs: {},
                 },
                 {
                   kind: "block",
                   type: "Player_RealName",
-                  inputs: {}
+                  inputs: {},
                 },
                 {
                   kind: "block",
                   type: "Player_Xuid",
-                  inputs: {}
+                  inputs: {},
                 },
                 {
                   kind: "block",
                   type: "Player_Uuid",
-                  inputs: {}
+                  inputs: {},
                 },
                 {
                   kind: "block",
                   type: "Player_PermLevel",
-                  inputs: {}
+                  inputs: {},
                 },
                 {
                   kind: "block",
                   type: "Player_GameMode",
-                  inputs: {}
+                  inputs: {},
                 },
                 {
                   kind: "block",
                   type: "Player_CanFly",
-                  inputs: {}
+                  inputs: {},
                 },
                 {
                   kind: "block",
                   type: "Player_CanSleep",
-                  inputs: {}
+                  inputs: {},
                 },
                 {
                   kind: "block",
                   type: "Player_CanBeSeenOnMap",
-                  inputs: {}
+                  inputs: {},
                 },
                 {
                   kind: "block",
                   type: "Player_CanFreeze",
-                  inputs: {}
+                  inputs: {},
                 },
                 {
                   kind: "block",
                   type: "Player_CanSeeDaylight",
-                  inputs: {}
+                  inputs: {},
                 },
                 {
                   kind: "block",
                   type: "Player_CanShowNameTag",
-                  inputs: {}
+                  inputs: {},
                 },
                 {
                   kind: "block",
                   type: "Player_CanStartSleepInBed",
-                  inputs: {}
+                  inputs: {},
                 },
                 {
                   kind: "block",
                   type: "Player_CanPickupItems",
-                  inputs: {}
+                  inputs: {},
                 },
                 {
                   kind: "block",
                   type: "Player_MaxHealth",
-                  inputs: {}
+                  inputs: {},
                 },
                 {
                   kind: "block",
                   type: "Player_Health",
-                  inputs: {}
+                  inputs: {},
                 },
                 {
                   kind: "block",
                   type: "Player_InAir",
-                  inputs: {}
+                  inputs: {},
                 },
                 {
                   kind: "block",
                   type: "Player_InWater",
-                  inputs: {}
+                  inputs: {},
                 },
                 {
                   kind: "block",
                   type: "Player_InLava",
-                  inputs: {}
+                  inputs: {},
                 },
                 {
                   kind: "block",
                   type: "Player_InRain",
-                  inputs: {}
+                  inputs: {},
                 },
                 {
                   kind: "block",
                   type: "Player_InSnow",
-                  inputs: {}
+                  inputs: {},
                 },
                 {
                   kind: "block",
                   type: "Player_InWall",
-                  inputs: {}
+                  inputs: {},
                 },
                 {
                   kind: "block",
                   type: "Player_InWaterOrRain",
-                  inputs: {}
+                  inputs: {},
                 },
                 {
                   kind: "block",
                   type: "Player_InWorld",
-                  inputs: {}
+                  inputs: {},
                 },
                 {
                   kind: "block",
                   type: "Player_InClouds",
-                  inputs: {}
+                  inputs: {},
                 },
                 {
                   kind: "block",
                   type: "Player_IsSneaking",
-                  inputs: {}
+                  inputs: {},
                 },
                 {
                   kind: "block",
                   type: "Player_Speed",
-                  inputs: {}
+                  inputs: {},
                 },
                 {
                   kind: "block",
                   type: "Player_Direction",
-                  inputs: {}
+                  inputs: {},
                 },
                 {
                   kind: "block",
                   type: "Player_UniqueId",
-                  inputs: {}
+                  inputs: {},
                 },
                 {
                   kind: "block",
                   type: "Player_LangCode",
-                  inputs: {}
+                  inputs: {},
                 },
                 {
                   kind: "block",
                   type: "Player_IsLoading",
-                  inputs: {}
+                  inputs: {},
                 },
                 {
                   kind: "block",
                   type: "Player_IsInvisible",
-                  inputs: {}
+                  inputs: {},
                 },
                 {
                   kind: "block",
                   type: "Player_IsInsidePortal",
-                  inputs: {}
+                  inputs: {},
                 },
                 {
                   kind: "block",
                   type: "Player_IsHurt",
-                  inputs: {}
+                  inputs: {},
                 },
                 {
                   kind: "block",
                   type: "Player_IsTrusting",
-                  inputs: {}
+                  inputs: {},
                 },
                 {
                   kind: "block",
                   type: "Player_IsTouchingDamageBlock",
-                  inputs: {}
+                  inputs: {},
                 },
                 {
                   kind: "block",
                   type: "Player_IsHungry",
-                  inputs: {}
+                  inputs: {},
                 },
                 {
                   kind: "block",
                   type: "Player_IsOnFire",
-                  inputs: {}
+                  inputs: {},
                 },
                 {
                   kind: "block",
                   type: "Player_IsOnGround",
-                  inputs: {}
+                  inputs: {},
                 },
                 {
                   kind: "block",
                   type: "Player_IsOnHotBlock",
-                  inputs: {}
+                  inputs: {},
                 },
                 {
                   kind: "block",
                   type: "Player_IsTrading",
-                  inputs: {}
+                  inputs: {},
                 },
                 {
                   kind: "block",
                   type: "Player_IsAdventure",
-                  inputs: {}
+                  inputs: {},
                 },
                 {
                   kind: "block",
                   type: "Player_IsGliding",
-                  inputs: {}
+                  inputs: {},
                 },
                 {
                   kind: "block",
                   type: "Player_IsSurvival",
-                  inputs: {}
+                  inputs: {},
                 },
                 {
                   kind: "block",
                   type: "Player_IsSpectator",
-                  inputs: {}
+                  inputs: {},
                 },
                 {
                   kind: "block",
                   type: "Player_IsRiding",
-                  inputs: {}
+                  inputs: {},
                 },
                 {
                   kind: "block",
                   type: "Player_IsDancing",
-                  inputs: {}
+                  inputs: {},
                 },
                 {
                   kind: "block",
                   type: "Player_IsCreative",
-                  inputs: {}
+                  inputs: {},
                 },
                 {
                   kind: "block",
                   type: "Player_IsFlying",
-                  inputs: {}
+                  inputs: {},
                 },
                 {
                   kind: "block",
                   type: "Player_IsSleeping",
-                  inputs: {}
+                  inputs: {},
                 },
                 {
                   kind: "block",
                   type: "Player_IsMoving",
-                  inputs: {}
+                  inputs: {},
                 },
                 {
                   kind: "block",
                   type: "Player_IP",
-                  inputs: {}
+                  inputs: {},
                 },
                 {
-                  kind: "sep"
+                  kind: "sep",
                 },
                 {
                   kind: "block",
                   type: "Player_isOP",
-                  inputs: {}
+                  inputs: {},
                 },
-              ]
-            }
-          ]
+              ],
+            },
+          ],
         },
         {
           kind: "category",
@@ -964,8 +964,8 @@ export const toolbox = {
               type: "Event",
               inputs: {
                 event: {},
-                callback: {}
-              }
+                callback: {},
+              },
             },
             {
               kind: "category",
@@ -976,14 +976,14 @@ export const toolbox = {
                   kind: "block",
                   type: "onPreJoin",
                   inputs: {
-                    player: {}
-                  }
+                    player: {},
+                  },
                 },
               ],
-            }
-          ]
+            },
+          ],
         },
-      ]
+      ],
     },
   ],
 };

@@ -4,9 +4,9 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import * as Blockly from 'blockly/core';
+import * as Blockly from "blockly/core";
 
-const storageKey = 'mainWorkspace';
+const storageKey = "mainWorkspace";
 
 /**
  * Saves the state of the workspace to browser's local storage.
